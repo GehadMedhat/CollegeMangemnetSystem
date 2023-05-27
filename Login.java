@@ -195,7 +195,7 @@ public class Login extends JFrame implements ActionListener {
             button2 = new JButton("Instructor");
             button3 = new JButton("Library");
             button4 = new JButton("Registration");
-            button5 = new JButton("Department");
+            button5 = new JButton("GPA Calculator");
             button6 = new JButton("Bus");
             button7 = new JButton("Hostel");
             button8 = new JButton("About Us");
@@ -257,6 +257,20 @@ public class Login extends JFrame implements ActionListener {
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setVisible(true);
 
+            button1.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    // create and display the new page or class here
+                    Student studentPage = new Student();
+                    studentPage.setVisible(true);
+                }
+            });
+            button2.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    // create and display the new page or class here
+                    Instructor instructorPage = new Instructor();
+                    instructorPage.setVisible(true);
+                }
+            });
             button3.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     // create and display the new page or class here
@@ -264,11 +278,18 @@ public class Login extends JFrame implements ActionListener {
                     libraryPage.setVisible(true);
                 }
             });
-  button4.addActionListener(new ActionListener() {
+            button4.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     // create and display the new page or class here
                     Registration RegPage = new Registration();
                     RegPage.setVisible(true);
+                }
+            });
+            button5.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    // create and display the new page or class here
+                    GPA GPAPage = new GPA();
+                    GPAPage.setVisible(true);
                 }
             });
             button6.addActionListener(new ActionListener() {
